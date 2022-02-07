@@ -22,7 +22,7 @@ contract AdditionGame {
     function trasnfer(uint _value) public returns (bool) {
 
         require(getBalance() >= _value); //getbalance 로 계좌 잔액 확인후 가능하면 진행
-        msg.sender.trasnfer( _value );
+        msg.sender.trasnfer( _value ); //--->https://coder-question-ko.com/cq-ko-blog/24846
         return true;
 
 
