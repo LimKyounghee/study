@@ -1,14 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-//https://ide.klaytn.com/#optimize=false&runs=200&evmVersion=constantinople&version=soljson-v0.8.7+commit.e28d00a7.js
 
 pragma solidity >=0.7.0 <0.9.0;
 
 contract AdditionGame {
 
-    address owner;
+    address payable owner;
     
     constructor() {
-        owner = msg.sender; // 'msg.sender' 해당 contract를 호출하는 사람(배포한 사람)
+        owner = payable(msg.sender); // 'msg.sender' 해당 contract를 호출하는 사람(배포한 사람)
     }
 
     function getBalance() public view returns (uint) {
@@ -23,7 +22,8 @@ contract AdditionGame {
     function trasnfer(uint _value) public returns (bool) {
 
         require(getBalance() >= _value); //getbalance 로 계좌 잔액 확인후 가능하면 진행
-        msg.sender.trasnfer( _value ); //--->https://coder-question-ko.com/cq-ko-blog/24846
+        payable(msg.sender).transfer( _value );// 정답을 맞춘 sender 에게 value 만큼 transfer 해줌
+        
         return true;
 
 
