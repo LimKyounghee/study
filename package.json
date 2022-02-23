@@ -5,7 +5,8 @@
   "main": "truffle.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "start": "webpack-dev-server"
   },
   "dependencies": {
     "caver-js": "0.0.2-m",
@@ -26,5 +27,16 @@
       "browser": true,
       "node": true
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkagill/addition-game-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkagill/addition-game-starter/issues"
+  },
+  "homepage": "https://github.com/kkagill/addition-game-starter#readme",
+  "keywords": []
 }

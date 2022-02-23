@@ -17,7 +17,6 @@ module.exports = {
             network_id: '1001', // Baobab 네트워크 id
             gas: 20000000, // 트랜잭션 가스 한도
             gasPrice: 25000000000, // Baobab의 gasPrice는 25 Gpeb입니다
-            // 안녕하세요.>>>????
         }
     },
     compilers: {
